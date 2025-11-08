@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Caro Power 3D — Neon Edition</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: true },
+      theme: {
+        extend: {
+          colors: {
+            'caro-green': '#10b981',
+            'caro-accent': '#4b5e8a',
+          },
+          backgroundImage: {
+            'wood-3d-pattern': "linear-gradient(170deg, #4a3a2a 0%, #2b1b0b 100%), radial-gradient(120% 100% at 20% 0%, rgba(255,255,255,0.04), rgba(0,0,0,0.1))",
+          },
+        },
+      },
+    };
+  </script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@400..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/backgrounds.css">
+  <link rel="stylesheet" href="styles/neon-effects.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/loading-premium.css">  <!-- ✅ THÊM DÒNG NÀY -->
+
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- React & Babel -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- Socket.IO Client -->
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script type="text/babel" src="scripts/config.js" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/utils.js" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/audio.js" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/ai.js" data-presets="env,react"></script>
+  <!-- Networking -->
+  <script src="scripts/net.js"></script>
+  
+  <!-- Components -->
+  <script type="text/babel" src="scripts/components/TimerRing.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/Piece.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/UsernameModal.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/WelcomeToast.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/ChatPanel.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/MatchHistory.jsx" data-presets="env,react"></script>
+  
+  <!-- Scenes -->
+  <script type="text/babel" src="scripts/scenes/LoadingScene.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/scenes/LobbyScene.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/scenes/MatchmakingScene.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/scenes/CreateRoomScene.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/scenes/JoinRoomScene.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/scenes/SettingsScene.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/scenes/GameScene.jsx" data-presets="env,react"></script>
+  
+  <!-- Main App -->
+  <script type="text/babel" src="scripts/App.jsx" data-presets="env,react"></script>
+</body>
+</html>

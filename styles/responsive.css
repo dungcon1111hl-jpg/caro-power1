@@ -1,0 +1,50 @@
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .neon-text {
+    font-size: clamp(2rem, 7vw, 3rem);
+    letter-spacing: 3px;
+  }
+
+  .wrapper {
+    max-width: 90%;
+    gap: clamp(12px, 3vh, 18px);
+  }
+
+  .neon-button {
+    font-size: clamp(0.85rem, 3.2vw, 1rem);
+    padding: clamp(10px, 2vh, 14px) clamp(18px, 4vw, 28px);
+  }
+
+  .platform-logo {
+    width: clamp(30px, 7vw, 40px);
+    height: clamp(30px, 7vw, 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .neon-text {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    letter-spacing: 2px;
+  }
+
+  .loading-text {
+    font-size: clamp(1.3rem, 4.5vw, 2rem);
+  }
+
+  .loading-bar {
+    width: clamp(150px, 60vw, 250px);
+    height: 8px;
+  }
+
+  .platforms {
+    gap: clamp(12px, 3vw, 20px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .in-match button, .in-match button::before, .in-match button::after,
+  .neon-board-container, .neon-board-container::before, .neon-board-container::after,
+  .stars, .shooting-star, .neon-text, .loading-text, .neon-button {
+    animation: none !important;
+  }
+}
