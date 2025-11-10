@@ -35,6 +35,7 @@ window.useAudio = function() {
     beep,
     tick: () => beep(880, 0.03),
     hurry: () => beep(1200, 0.08),
+    warning: () => beep(800, 0.1),
     timeout: () => beep(220, 0.25),
     win: () => {
       beep(523, 0.08);

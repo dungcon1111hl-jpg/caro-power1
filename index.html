@@ -2,7 +2,10 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
   <title>Caro Power 3D — Neon Edition</title>
   
   <!-- Tailwind CSS -->
@@ -24,10 +27,29 @@
     };
   </script>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts - Beautiful Modern Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Orbitron:wght@400..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400..900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Global Font Style -->
+  <style>
+    * {
+      font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+      font-family: 'Inter', 'Poppins', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', 'Inter', sans-serif;
+      font-weight: 600;
+    }
+    button, .font-semibold, .font-bold {
+      font-family: 'Inter', 'Poppins', sans-serif;
+    }
+  </style>
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/reset.css">
@@ -45,6 +67,10 @@
   <!-- React & Babel -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  
+  <!-- Components -->
+  <script src="scripts/components/TimerDisplay.jsx" type="text/babel"></script>
+  <script src="scripts/components/index.js" type="text/babel"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
   <!-- Socket.IO Client -->
@@ -52,15 +78,25 @@
 
   <!-- Application Scripts -->
   <script type="text/babel" src="scripts/config.js" data-presets="env,react"></script>
+  <script src="scripts/timer-config.js"></script>
+  <script src="scripts/sprite-sheet.js"></script>
+  <script src="scripts/injection-protection.js"></script>
+  <script src="scripts/game-save.js"></script>
+  <script src="scripts/responsive-handler.js"></script>
   <script type="text/babel" src="scripts/utils.js" data-presets="env,react"></script>
   <script type="text/babel" src="scripts/audio.js" data-presets="env,react"></script>
   <script type="text/babel" src="scripts/ai.js" data-presets="env,react"></script>
+  <script src="scripts/bot-system.js"></script>
   <!-- Networking -->
   <script src="scripts/net.js"></script>
   
   <!-- Components -->
-  <script type="text/babel" src="scripts/components/TimerRing.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/TimerCanvas.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/TimerRing.tsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/TimerConfigModal.tsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/ResumeModal.jsx" data-presets="env,react"></script>
   <script type="text/babel" src="scripts/components/Piece.jsx" data-presets="env,react"></script>
+  <script type="text/babel" src="scripts/components/PieceWithSprite.tsx" data-presets="env,react"></script>
   <script type="text/babel" src="scripts/components/UsernameModal.jsx" data-presets="env,react"></script>
   <script type="text/babel" src="scripts/components/WelcomeToast.jsx" data-presets="env,react"></script>
   <script type="text/babel" src="scripts/components/ChatPanel.jsx" data-presets="env,react"></script>

@@ -146,13 +146,13 @@ window.CreateRoomScene = function({ config, onBack, onRoomCreated }) {
 
             <div className="mb-4">
               <label className="block text-sm text-slate-300 mb-2 text-left">
-                Bet Amount
+                Challenge Value (GMP)
               </label>
               <input
                 type="text"
                 value={betAmount}
                 onChange={handleBetAmountChange}
-                placeholder="Enter bet amount..."
+                placeholder="Enter Challenge Value (GMP)..."
                 className="w-full px-4 py-3 bg-slate-800/50 border-2 border-caro-green/50 rounded-lg text-white text-center text-lg font-bold focus:outline-none focus:border-caro-green focus:ring-2 focus:ring-caro-green/50"
                 style={{ 
                   fontFamily: 'Orbitron, sans-serif'
@@ -203,7 +203,7 @@ window.CreateRoomScene = function({ config, onBack, onRoomCreated }) {
 
             {betAmount && (
               <div className="mb-4 p-3 bg-slate-800/30 rounded-lg border border-slate-700">
-                <div className="text-sm text-slate-400 mb-1">Bet Amount:</div>
+                <div className="text-sm text-slate-400 mb-1">Challenge Value:</div>
                 <div 
                   className="text-xl font-bold text-caro-green"
                   style={{ 
@@ -211,7 +211,7 @@ window.CreateRoomScene = function({ config, onBack, onRoomCreated }) {
                     letterSpacing: '0.05em'
                   }}
                 >
-                  {betAmount} VNĐ
+                  {betAmount} GMP
                 </div>
               </div>
             )}

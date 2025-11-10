@@ -22,6 +22,7 @@ window.CaroConfig = {
   
   SCORES_KEY: 'caro_scores',
   CONFIG_KEY: 'caro_config_v8_infinite',
+  TIMER_CONFIG_KEY: 'caro_timer_config_v1',
 
   Skills: { 
     ERASE: 'erase', 
@@ -57,6 +58,12 @@ window.CaroConfig = {
       X: { label: 'Blue X', primary: '#2f7df4' },
       O: { label: 'Orange O', primary: '#ff8a3c' },
     },
+  },
+
+  DefaultTimerConfig: {
+    turnSeconds: 600, // 10 minutes = 600 seconds (configurable, not hardcoded)
+    pauseOnOpponentTurn: true,
+    warningSeconds: 60, // Warning when 1 minute left
   },
 
   DIRS: [[1, 0], [0, 1], [1, 1], [1, -1]]

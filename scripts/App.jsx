@@ -64,10 +64,16 @@ window.App = function() {
         config={config}
         onCancel={() => setScreen(Screens.LOBBY)} 
         onMatched={(payload) => {
+          console.log('🎮 Match found:', payload);
           if (payload?.role) {
             setScreen({ id: Screens.GAME, mode: Modes.ONLINE, opponent: payload.opponent, role: payload.role });
           } else {
-            setScreen({ id: Screens.GAME, mode: Modes.LOCAL, opponent: payload });
+            // Đảm bảo bot object có đầy đủ thông tin
+            const opponent = payload?.isBot || payload?.isAI 
+              ? { ...payload, isAI: true, isBot: payload?.isBot !== false }
+              : payload;
+            console.log('🎮 Starting game with opponent:', opponent);
+            setScreen({ id: Screens.GAME, mode: Modes.LOCAL, opponent: opponent });
           }
         }} 
       />;
