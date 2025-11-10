@@ -110,3 +110,8 @@ npm run dev
 - Timer tự động pause khi đến lượt đối thủ (nếu enabled)
 - Injection protection hoạt động tự động, không cần cấu hình
 
+
+
+
+
+"# cocaro" 
